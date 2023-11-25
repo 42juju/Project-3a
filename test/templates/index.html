@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Chart Generator</title>
+</head>
+<body>
+    <h1>Stock Price Chart Generator</h1>
+    <form action="/chart" method="post">
+        <label for="stock_symbol">Enter the stock symbol:</label>
+        <input type="text" id="stock_symbol" name="stock_symbol" required><br>
+
+        <label>Chart Type:</label>
+        <input type="radio" id="bar" name="chart_type" value="1" checked>
+        <label for="bar">Bar</label>
+        <input type="radio" id="line" name="chart_type" value="2">
+        <label for="line">Line</label><br>
+
+        <label for="time_series">Select Time Series:</label>
+        <select id="time_series" name="time_series" required>
+            <option value="1">Intraday</option>
+            <option value="2">Daily</option>
+            <option value="3">Weekly</option>
+            <option value="4">Monthly</option>
+        </select><br>
+
+        <label for="start_date">Enter the start date (YYYY-MM-DD):</label>
+        <input type="text" id="start_date" name="start_date" required><br>
+
+        <label for="end_date">Enter the end date (YYYY-MM-DD):</label>
+        <input type="text" id="end_date" name="end_date" required><br>
+
+        <button type="submit">Generate Chart</button>
+    </form>
+</body>
+</html>
